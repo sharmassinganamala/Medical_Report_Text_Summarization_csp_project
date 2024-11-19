@@ -1,0 +1,30 @@
+body {
+    background-image: url(https://res.cloudinary.com/dghqpghxd/image/upload/v1729749118/xgqnok3ydraxkbj5jv9o.jpg);
+}
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.container {
+    text-align: center;
+    align-items: center;
+}
+.heading {
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    align-items: center;
+}
