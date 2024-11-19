@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report Summarization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://th.bing.com/th/id/OIP.AUmKXjVPlpjeEJrTHfRcEAAAAA?rs=1&pid=ImgDetMain');
+            background-size: cover;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .file-upload {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Medical Report</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="file-upload">
+                <label for="file">Choose PDF File:</label>
+                <input type="file" name="file" id="file" accept=".pdf" required>
+            </div>
+            <button type="submit">Summarize</button>
+        </form>
+    </div>
+</body>
+</html>

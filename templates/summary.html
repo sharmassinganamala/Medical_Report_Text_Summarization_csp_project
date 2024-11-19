@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary of Medical Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/010/812/032/non_2x/double-exposure-of-technology-healthcare-and-medicine-concept-two-doctors-using-digital-tablet-and-modern-virtual-screen-interface-icons-panoramic-banner-blurred-background-free-photo.jpg');
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        .summary, .precautions {
+            margin-top: 20px;
+        }
+        .download-btn {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Summary of Medical Report</h1>
+        <div class="patient-info">
+            <strong>Patient Name:</strong> {{ patient_name }}<br>
+            <strong>Physician:</strong> {{ physician_name }}<br>
+        </div>
+        <div class="summary">
+            <h2>Summary:</h2>
+            <p>{{ summary }}</p>
+        </div>
+        <div class="sections">
+            <h2>Identified Sections:</h2>
+            <ul>
+                {% for section in sections %}
+                    <li>{{ section }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="precautions">
+            <h2>Precautions:</h2>
+            <ul>
+                {% for precaution in precautions %}
+                    <li>{{ precaution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/download?summary={{ summary }}&patient_info={{ patient_name }}&precautions={{ precautions | join(', ') }}" class="download-btn">Download Summary</a>
+    </div>
+</body>
+</html>
